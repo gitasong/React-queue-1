@@ -11,7 +11,8 @@ export default (state = [], action) => {
           timeOpened: timeOpened,
           id: id
         }
-      default:
-        return state;
+      ]
+    default:
+      return state;
   }
 }
