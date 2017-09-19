@@ -17,7 +17,7 @@ class NewTicketForm extends React.Component {
     const  { dispatch } = this.props;
     const action = {
       type: c.ADD_TICKET,
-      id: null,
+      id: v4(),
       names: _names.value,
       location: _location.value,
       issue: _issue.value,
