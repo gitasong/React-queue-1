@@ -43,7 +43,7 @@ class Queue extends React.Component{
   }
 
   updateTicketTimeSinceOpened() {
-    
+    this.forceUpdate();
   }
 
   render(){
