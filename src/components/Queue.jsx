@@ -7,10 +7,6 @@ class Queue extends React.Component{
 
   constructor(props) {
     super(props);
-    this.state = {
-      masterTicketList: []
-    };
-    this.addNewTicketToList = this.addNewTicketToList.bind(this);
     this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
