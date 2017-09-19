@@ -71,4 +71,4 @@ class Queue extends React.Component{
   }
 }
 
-export default Queue;
+export default connect()(Queue);
