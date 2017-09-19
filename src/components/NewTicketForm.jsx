@@ -17,7 +17,7 @@ class NewTicketForm extends React.Component {
     const { _names, _location, _issue } = this.refs;
     const  { dispatch } = this.props;
     const action = {
-      // object literal describing new state will go here!
+      type: c.ADD_TICKET,
     }
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
     this.props.onNewTicketCreation(newTicket);
