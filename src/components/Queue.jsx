@@ -71,4 +71,8 @@ class Queue extends React.Component{
   }
 }
 
+const mapStateToProps = state => {
+  
+}
+
 export default connect()(Queue);
