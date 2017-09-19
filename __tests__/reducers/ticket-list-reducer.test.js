@@ -1,5 +1,5 @@
 import ticketList from './../../src/reducers/ticket-list-reducer';
-import constants from './../../src/constants';
+import c from './../../src/constants';
 
 describe("Ticket list reducer", () => {
   let action;
