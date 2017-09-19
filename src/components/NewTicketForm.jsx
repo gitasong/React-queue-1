@@ -15,6 +15,7 @@ class NewTicketForm extends React.Component {
   handleNewTicketFormSubmission(event) {
     event.preventDefault();
     const { _names, _location, _issue } = this.refs;
+    const  { dispatch } = this.props;
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
     this.props.onNewTicketCreation(newTicket);
     this.props.hideFormAfterSubmission();
