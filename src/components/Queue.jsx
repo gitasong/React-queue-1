@@ -78,4 +78,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect()(Queue);
+export default connect(mapStateToProps)(Queue);
