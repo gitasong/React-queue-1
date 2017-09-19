@@ -3,8 +3,6 @@ import Ticket from "./Ticket";
 import PropTypes from "prop-types";
 
 function TicketList(props){
-  const timeSinceOpened = new Moment().to(props.timeOpened);
-  
   return (
     <div>
       <hr/>
