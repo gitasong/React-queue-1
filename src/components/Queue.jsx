@@ -42,12 +42,6 @@ class Queue extends React.Component{
     clearInterval(this.timeSinceOpenedChecker);
   }
 
-  addNewTicketToList(newTicket){
-    var newMasterTicketList = this.state.masterTicketList.slice();
-    newMasterTicketList.push(newTicket);
-    this.setState({masterTicketList: newMasterTicketList});
-  }
-
   updateTicketTimeSinceOpened() {
     console.log("check");
     let newMasterTicketList = this.state.masterTicketList.slice();
