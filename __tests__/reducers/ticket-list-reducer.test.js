@@ -1,0 +1,3 @@
+describe("Ticket list reducer", () => {
+
+});
