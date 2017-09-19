@@ -6,6 +6,8 @@ import reducer from './reducers/ticket-list-reducer';
 
 import App from "./components/App";
 
+const store = createStore(reducer);
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
