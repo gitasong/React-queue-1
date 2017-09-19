@@ -4,7 +4,7 @@
   "description": "react based help queue",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "start": "webpack-dev-server",
     "build": "webpack",
     "lint": "eslint src/** src/**/**; exit 0"
