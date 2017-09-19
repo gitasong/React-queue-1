@@ -11,7 +11,7 @@ const store = createStore(reducer);
 
 const render = (Component) => {
   ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
       <Component/>
     </Provider>,
     document.getElementById("react-app-root")
