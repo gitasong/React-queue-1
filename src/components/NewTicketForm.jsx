@@ -49,4 +49,6 @@ NewTicketForm.propTypes = {
   hideFormAfterSubmission: PropTypes.func
 };
 
+NewTicketForm = connect()(NewTicketForm);
+
 export default NewTicketForm;
