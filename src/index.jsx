@@ -9,14 +9,12 @@ import App from "./components/App";
 
 const store = createStore(reducer);
 
-const render = (Component) => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <Component/>
-    </Provider>,
-    document.getElementById("react-app-root")
-  );
-};
+ReactDOM.render(
+  <Provider store={store}>
+    <Component/>
+  </Provider>,
+  document.getElementById("react-app-root")
+);
 
 render(App);
 
