@@ -8,7 +8,7 @@ function App(){
     <div>
       <Header/>
       <Switch>
-        
+        <Route exact path="/" component={Queue} />
       </Switch>
       <Queue/>
     </div>
