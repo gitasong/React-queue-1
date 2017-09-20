@@ -13,10 +13,10 @@ const store = createStore(reducer);
 const render = (Component) => {
   ReactDOM.render(
     <Provider store={store}>
-    </HashRouter>
+    <HashRouter>
       <App/>
       <Component/>
-    <//HashRouter>
+    </HashRouter>
     </Provider>,
     document.getElementById("react-app-root")
   );
