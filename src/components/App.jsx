@@ -9,6 +9,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path="/" component={Queue} />
+        <Route path="/admin" component={Admin} />
       </Switch>
       <Queue/>
     </div>
