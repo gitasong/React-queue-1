@@ -14,7 +14,6 @@ const render = (Component) => {
   ReactDOM.render(
     <Provider store={store}>
     <HashRouter>
-      <App/>
       <Component/>
     </HashRouter>
     </Provider>,
