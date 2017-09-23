@@ -36,6 +36,7 @@ Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   timeOpened: PropTypes.string,
+  id: PropTypes.string.isRequired,
   issue: PropTypes.string,
   currentRoute: PropTypes.string,
   handleClosingTicket: PropTypes.func
