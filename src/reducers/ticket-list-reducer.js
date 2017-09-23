@@ -12,6 +12,9 @@ export default (state = [], action) => {
           id: id
         }
       ]
+    case 'CLOSE_TICKET':
+    return
+    
     default:
       return state;
   }
