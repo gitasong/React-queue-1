@@ -1,5 +1,6 @@
 import React from "react";
 import TicketList from "./TicketList";
+import {connect} from "react-redux";
 
 class Admin extends React.Component {
   render() {
@@ -12,4 +13,4 @@ class Admin extends React.Component {
   }
 }
 
-export default Admin;
+export default connect()(Admin);
