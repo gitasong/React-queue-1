@@ -5,6 +5,11 @@ import c from "./../constants";
 
 class Admin extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.handleClosingTicket = this.handleClosingTicket.bind(this);
+  }
+
   handleClosingTicket(ticketID) {
     const { dispatch } = this.props;
     const action = {
