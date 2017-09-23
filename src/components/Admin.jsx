@@ -1,11 +1,13 @@
 import React from "react";
 
-function Admin() {
-  return (
-    <div>
-      <h3>This is the Admin page!</h3>
-    </div>
-  );
+class Admin extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3>Admin Page</h3>
+      </div>
+    );
+  }
 }
 
 export default Admin;
