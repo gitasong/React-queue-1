@@ -10,14 +10,14 @@ function Ticket(props){
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <p>{timeSinceOpened}</p>
-      <hr/>
     </div>
-    
+
     if (props.currentRoute === "/admin") {
       return (
         <div>
           {ticketDetails}
           <button>Close Ticket</button>
+          <hr/>
         </div>
       );
     }
@@ -25,10 +25,10 @@ function Ticket(props){
       return (
         <div>
           {ticketDetails}
+          <hr/>
         </div>
       );
     }
-  );
 }
 
 
