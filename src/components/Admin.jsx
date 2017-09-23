@@ -16,6 +16,7 @@ class Admin extends React.Component {
       type: c.CLOSE_TICKET,
       ticketID: ticketID,
     }
+    dispatch(action);
   }
 
   render() {
