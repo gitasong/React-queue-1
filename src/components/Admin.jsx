@@ -13,4 +13,10 @@ class Admin extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    adminMasterTicketList: state
+  }
+}
+
 export default connect()(Admin);
