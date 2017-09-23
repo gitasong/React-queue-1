@@ -35,7 +35,7 @@ function Ticket(props){
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  timeOpened: PropTypes.string,
+  timeOpened: PropTypes.number,
   id: PropTypes.string.isRequired,
   issue: PropTypes.string,
   currentRoute: PropTypes.string,
