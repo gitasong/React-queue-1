@@ -20,6 +20,7 @@ Ticket.propTypes = {
   location: PropTypes.string.isRequired,
   timeOpened: PropTypes.string,
   issue: PropTypes.string,
+  currentRoute: PropTypes.string
 };
 
 export default Ticket;
