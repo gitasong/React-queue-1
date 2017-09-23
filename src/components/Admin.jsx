@@ -1,4 +1,5 @@
 import React from "react";
+import TicketList from "./TicketList";
 
 class Admin extends React.Component {
   render() {
