@@ -1,13 +1,18 @@
 import React from "react";
 import TicketList from "./TicketList";
 import {connect} from "react-redux";
+import c from "./../constants";
 
 class Admin extends React.Component {
 
   handleClosingTicket(ticketID) {
     const { dispatch } = this.props;
+    const action = {
+      type: c.CLOSE_TICKET,
+      ticketID: ticketID,
+    }
   }
-  
+
   render() {
     console.log("Current Path: ", this.props.location.pathname);
     return (
