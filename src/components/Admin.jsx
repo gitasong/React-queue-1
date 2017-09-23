@@ -24,7 +24,8 @@ class Admin extends React.Component {
     return (
       <div>
         <h3>Admin Page</h3>
-      <TicketList ticketList={this.props.adminMasterTicketList} currentRoute={this.props.location.pathname}/>
+      <TicketList ticketList={this.props.adminMasterTicketList} currentRoute={this.props.location.pathname}
+      handleClosingTicket={this.handleClosingTicket}/>
       </div>
     );
   }
