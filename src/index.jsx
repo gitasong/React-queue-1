@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/ticket-list-reducer';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
+import middlewareLogger from './middleware/middleware-logger';
 
 import App from "./components/App";
 
