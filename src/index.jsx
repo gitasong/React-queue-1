@@ -10,7 +10,18 @@ import persistDataLocally from './middleware/persist-local-storage-data';
 
 import App from "./components/App";
 
-const store = createStore(reducer, applyMiddleware(middlewareLogger, persistDataLocally));
+let retrievedState;
+try {
+    retrievedState = localStorage.getItem("reduxStore");
+  if (retrievedState === null) {
+    retrievedState = [];
+  }
+  retrievedState = JSON.parse(retrievedState);
+} catch (err) {
+  retrievedState = [];
+}
+
+const store = createStore(reducer, retrievedState, applyMiddleware(middlewareLogger, persistDataLocally));
 
 const render = (Component) => {
   ReactDOM.render(
