@@ -1,15 +1,12 @@
 import React from "react";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
+import { connect } from 'react-redux';
 
 class Queue extends React.Component{
 
   constructor(props) {
     super(props);
-    this.state = {
-      masterTicketList: []
-    };
-    this.addNewTicketToList = this.addNewTicketToList.bind(this);
     this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
@@ -45,29 +42,26 @@ class Queue extends React.Component{
     clearInterval(this.timeSinceOpenedChecker);
   }
 
-  addNewTicketToList(newTicket){
-    var newMasterTicketList = this.state.masterTicketList.slice();
-    newMasterTicketList.push(newTicket);
-    this.setState({masterTicketList: newMasterTicketList});
-  }
-
   updateTicketTimeSinceOpened() {
-    console.log("check");
-    let newMasterTicketList = this.state.masterTicketList.slice();
-    newMasterTicketList.forEach((ticket) =>
-     ticket.setTimeSinceOpened()
-    );
-    this.setState({masterTicketList:newMasterTicketList})
+    this.forceUpdate();
   }
 
   render(){
+    console.log("Current Path: ", this.props.location.pathname);
     return (
       <div>
-        <TicketList ticketList = {this.state.masterTicketList}/>
-        <NewTicketControl onNewTicketCreation= {this.addNewTicketToList}/>
+        <TicketList ticketList = {this.props.masterTicketList}/>
+        <NewTicketControl/>
       </div>
     );
   }
 }
 
-export default Queue;
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    masterTicketList : state
+  }
+}
+
+export default connect(mapStateToProps)(Queue);

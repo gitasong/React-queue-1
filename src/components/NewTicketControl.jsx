@@ -46,7 +46,6 @@ class NewTicketControl extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <NewTicketForm
-            onNewTicketCreation={this.props.onNewTicketCreation}
             hideFormAfterSubmission = {this.hideFormModal}/>
           </Modal.Body>
         </Modal>
@@ -56,7 +55,4 @@ class NewTicketControl extends React.Component {
 
 }
 
-NewTicketControl.propTypes = {
-  onNewTicketCreation: PropTypes.func
-};
 export default NewTicketControl;

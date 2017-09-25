@@ -1,14 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
+import { createStore } from 'redux';
+import reducer from './reducers/ticket-list-reducer';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
 import App from "./components/App";
 
+const store = createStore(reducer);
+
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
+    <Provider store={store}>
+    <HashRouter>
       <Component/>
-    </AppContainer>,
+    </HashRouter>
+    </Provider>,
     document.getElementById("react-app-root")
   );
 };
