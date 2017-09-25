@@ -3,3 +3,5 @@ const persistDataLocally = store => next => action => {
   console.log("Local Storage:", localStorage["reduxStore"]);
   return next(action);
 }
+
+export default persistDataLocally;
