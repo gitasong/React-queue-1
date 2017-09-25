@@ -9,7 +9,7 @@ import middlewareLogger from './middleware/middleware-logger';
 
 import App from "./components/App";
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(middlewareLogger));
 
 const render = (Component) => {
   ReactDOM.render(
