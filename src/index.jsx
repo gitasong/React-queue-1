@@ -10,7 +10,7 @@ import persistDataLocally from './middleware/persist-local-storage-data';
 
 import App from "./components/App";
 
-const store = createStore(reducer, applyMiddleware(middlewareLogger), persistDataLocally);
+const store = createStore(reducer, applyMiddleware(middlewareLogger, persistDataLocally));
 
 const render = (Component) => {
   ReactDOM.render(
